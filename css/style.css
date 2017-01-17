@@ -1,0 +1,105 @@
+* {
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	margin: 0;
+	padding: 2%;
+	background: #fff;
+	color: #444;
+	font: 1.3rem/1.5 'courier new', courier, monospace;
+}
+
+.spoiler {
+	display: flex;
+	justify-content: space-between;
+}
+
+.spoiler__column--primary {
+	width: 75%;
+}
+
+.spoiler__column--secondary {
+	width: 23%;
+}
+
+.result::selection {
+	background: #000;
+	color: #fff;
+}
+
+.message {
+	width: 100%;
+	margin: 0 0 1em;
+	padding: 10px;
+	font-weight: bold;
+}
+
+.bad {
+	background: #800;
+	color: #fff;
+}
+
+.good {
+	background: #282;
+	color: #fff;
+}
+
+h1 {
+	margin: 0 0 0.25em;
+	color: #000;
+	font-size: 2.4rem;
+	text-transform: uppercase;
+}
+
+h2 {
+	margin: 1em 0 0.25em;
+	color: #000;
+	font-size: 1.8rem;
+	text-transform: uppercase;
+}
+
+label {
+	display: block;
+	margin-bottom: 2px;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+textarea {
+	width: 100%;
+	margin: 0 0 0.5em;
+	padding: 10px;
+	border: 1px solid #999;
+	background: #ccc;
+	color: #666;
+	font: 1.3rem/1.5 'courier new', courier, monospace;
+	transition: 0.2s ease background-color;
+	will-change: background-color;
+	resize: none;
+}
+
+textarea:focus {
+	background: #eee;
+}
+
+button {
+	padding: 10px 30px;
+	border: 0;
+	background: #000;
+	color: #fff;
+	text-align: center;
+	font: bold 1.3rem/1 'courier new', courier, monospace;
+	text-transform: uppercase;
+	cursor: pointer;
+	transition: 0.2s ease background-color;
+	will-change: background-color;
+}
+
+button:hover {
+	background: #333;
+}

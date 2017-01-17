@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>MSE 2 CSV</title>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<h1>MSE 2 CSV</h1>
+
+<?php echo getMessage() ?>
+
+<form action="<?=$_SERVER['PHP_SELF']?>#output" method="post">
+	<div class="spoiler">
+		<div class="spoiler__column spoiler__column--primary">
+			<label for="spoiler-input">Paste the HTML spoiler here</label>
+			<textarea rows="20" name="spoiler-input" id="spoiler-input" placeholder="Do it!"></textarea>
+		</div>
+		<div class="spoiler__column spoiler__column--secondary">
+			<label for="spoiler-input">Output order for columns</label>
+			<textarea rows="8" name="indices"><?php echo getIndices(); ?></textarea>
+
+			<button type="submit">Convert</button>
+		</div>
+	</div>
+</form>
+
+<?php if ($mse2csv) : ?>
+<h2 id="output">Your Data Awaits&hellip;</h2>
+<textarea class="result" rows="20" onclick="this.select()"><?php echo $mse2csv; ?></textarea>
+<?php endif ?>
+
+</body>
+</html>
