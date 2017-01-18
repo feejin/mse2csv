@@ -79,7 +79,7 @@ function outputData($set) {
 
 	$headers = [];
 	foreach ($suppliedIndices as $index) {
-		$headers[] = $suppliedIndices[$indexMap[$index]];
+		$headers[] = $indexMap[$index];
 	}
 	$output = implode("\t", $headers) . "\n";
 
