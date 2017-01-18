@@ -81,7 +81,7 @@ function outputData($set) {
 	foreach ($suppliedIndices as $index) {
 		$headers[] = $suppliedIndices[$indexMap[$index]];
 	}
-	$output = implode("\t", $indexMap) . "\n";
+	$output = implode("\t", $headers) . "\n";
 
 	foreach($set as $card) {
 		$output .= implode("\t", $card) . "\n";
