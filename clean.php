@@ -12,6 +12,6 @@ $spoiler = file_get_contents('spoiler/index.html');
 
 // replace image tags with alt attributes and remove other tags we don't need
 $spoiler = preg_replace('/<img.*?alt=\'(.*?)\'[^\>]+>/', '$1', $spoiler);
-$spoiler = strip_tags($spoiler, '<span><h2><ul><li><br>');
+$spoiler = strip_tags($spoiler, '<style><span><h2><ul><li><br>');
 
 include('template/clean.html');
