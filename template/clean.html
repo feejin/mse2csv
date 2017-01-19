@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Clean Spoiler</title>
+	<link rel="stylesheet" href="css/clean.css">
+	<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script type="text/javascript">
+	$(function() {
+		$('.casting-cost').each(function(){ 
+			var $cc = $(this),
+				$li = $cc.parent('.card'),
+				h2 = $li.parent('.cards').prev('h2').text();
+
+			// single colour cards
+			if (h2.indexOf('White') != -1) {
+				$li.css('backgroundColor', '#f2ecdd');
+			}
+
+			if (h2.indexOf('Blue') != -1) {
+				$li.css('backgroundColor', '#d1e3ee');
+			}
+
+			if (h2.indexOf('Black') != -1) {
+				$li.css('backgroundColor', '#ddd');
+			}
+
+			if (h2.indexOf('Red') != -1) {
+				$li.css('backgroundColor', '#eed1d1');
+			}
+
+			if (h2.indexOf('Green') != -1) {
+				$li.css('backgroundColor', '#d1eedf');
+			}
+
+			if (h2.indexOf('Multi') != -1) {
+				$li.css('backgroundColor', '#f9f6cd');
+			}
+
+			if (h2.indexOf('lands') != -1) {
+				$li.css('backgroundColor', '#f9eacd');
+			}
+		})
+	});
+	</script>
+</head>
+<body>
+
+<h1>Escalation</h1>
+
+<?php echo $spoiler ?>
+
+</body>
+</html>
