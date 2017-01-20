@@ -8,7 +8,7 @@
 	<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 	<script type="text/javascript">
 	$(function() {
-		$('.casting-cost').each(function(){ 
+		$('.casting-cost').each(function(){
 			var $cc = $(this),
 				$li = $cc.parent('.card'),
 				h2 = $li.parent('.cards').prev('h2').text();
@@ -40,6 +40,27 @@
 
 			if (h2.indexOf('lands') != -1) {
 				$li.css('backgroundColor', '#f9eacd');
+			}
+		});
+
+		$('.rarity').each(function(){
+			var $self = $(this),
+				$r = $self.text();
+
+			if ($r.indexOf('C') != -1) {
+				$self.addClass('rarity--common');
+			}
+
+			if ($r.indexOf('U') != -1) {
+				$self.addClass('rarity--uncommon');
+			}
+
+			if ($r.indexOf('R') != -1) {
+				$self.addClass('rarity--rare');
+			}
+
+			if ($r.indexOf('M') != -1) {
+				$self.addClass('rarity--mythic');
 			}
 		})
 	});
