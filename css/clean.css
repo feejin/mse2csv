@@ -27,14 +27,12 @@ ul {
 	margin: 0; padding: 0;
 }
 
-
-
 li {
 	position: relative;
 	float: left;
 	width: 100%;
 	margin: 0 0 3% 0;
-	padding: 1%;
+	padding: 1% 1% 4%;
 	border: 1px dashed #ccc;
 	border-radius: 5px;
 	background: #eee;
@@ -58,8 +56,8 @@ span {
 	display: block;
 }
 
-.symbol { 
-	display: inline; 
+.symbol {
+	display: inline;
 }
 
 .name {
@@ -76,10 +74,31 @@ span {
 	width: 1.5em; height: 1.5em;
 	margin-bottom: 0.5em;
 	padding: 0.15em;
-	border: 1px solid #666;
 	border-radius: 100%;
 	text-align: center;
+	font-weight: bold;
 }
+
+.rarity--common {
+	background: #222;
+	color: #fff;
+}
+
+.rarity--uncommon {
+	background: #888;
+	color: #fff;
+}
+
+.rarity--rare {
+	background: #ffd700;
+	color: #320;
+}
+
+.rarity--mythic {
+	background: #B87333;
+	color: #fff;
+}
+
 .pt {
 	position: absolute;
 	bottom: 2%; right: 2%;
