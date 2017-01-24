@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Clean Spoiler</title>
+	<link rel="stylesheet" href="css/pt.css">
+</head>
+<body>
+
+<h1>Escalation Power/Toughness Breakdown</h1>
+
+<table width="100%">
+	<tr>
+		<th>Power / Toughness</th>
+		<th>Instances</th>
+	</tr>
+
+<?php
+foreach($output as $key => $val) {
+	echo '<tr>';
+	echo '<td>' . $key . '</td>';
+	echo '<td>' . $val . '</td>';
+	echo '</tr>' . "\n";
+}
+?>
+
+</table>
+
+
+</body>
+</html>
