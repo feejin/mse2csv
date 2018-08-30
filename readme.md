@@ -6,6 +6,4 @@ Only tested with my MSE setup, YMMV.
 
 ## Disclaimer
 
-I'm not a PHP developer.
 This code is most likely horrible.
-Yet it works.
